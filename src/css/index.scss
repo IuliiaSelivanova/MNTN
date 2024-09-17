@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'Gilroy';
+    src: local('Gilroy'),
+        url('../fonts/gilroy/gilroy-medium.otf') format('truetype'),
+        url('../fonts/gilroy/gilroy-bold.ttf') format('truetype'),
+        url('../fonts/gilroy/gilroy-extrabold.ttf') format('truetype')
+}
+@font-face {
+    font-family: 'Chronicle Display';
+    src: local('Chronical Display'),
+    url('../fonts/chronicle-display/ChronicleDisplaySemibold.otf') format('opentype'),
+    url('../fonts/chronicle-display/ChronicleDisplayBold.otf') format('opentype')
+}
+
+:root{
+    $clr-accent: #FBD784;
+    $clr-white: #FFFFFF;
+    $clr-bg: #0B1D26;
+}
+
+html,
+body {
+    font: {
+        size: 18px;
+        family: 'Gilroy', sans-serif;
+        weight: 700;
+    }
+}
+body{
+    background: $clr-bg url("/images/Background.png");
+    background-size: 100% auto;
+    color: white;
+}
+
+a{
+    color: $main_highlite;
+    transition: opacity 0.3s;
+    opacity: 1;
+
+    &:visited{
+        color: darken($main_highlite, 30)    
+    }
+
+    &:hover,
+    &:active{
+    opacity: .7;    
+    }
+}

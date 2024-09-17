@@ -1,7 +1,8 @@
+// Шрифты
 @font-face{
     font-family: 'Gilroy';
     src: local('Gilroy'),
-        url('../fonts/gilroy/gilroy-medium.otf') format('truetype'),
+        url('../fonts/gilroy/gilroy-medium.ttf') format('truetype'),
         url('../fonts/gilroy/gilroy-bold.ttf') format('truetype'),
         url('../fonts/gilroy/gilroy-extrabold.ttf') format('truetype')
 }
@@ -12,37 +13,110 @@
     url('../fonts/chronicle-display/ChronicleDisplayBold.otf') format('opentype')
 }
 
-:root{
-    $clr-accent: #FBD784;
-    $clr-white: #FFFFFF;
-    $clr-bg: #0B1D26;
-}
+// Переменные
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$ff-gilroy: 'Gilroy', sans-serif;
+$ff-chronicle: 'Chronicle Display', sans-serif;
+$clr-accent: #FBD784;
+$clr-white: #FFFFFF;
+$clr-bg: #0B1D26;
+$main-shift: 4.7rem;
 
 html,
 body {
     font: {
         size: 18px;
-        family: 'Gilroy', sans-serif;
-        weight: 700;
+        family: $ff-gilroy;
+        weight: $fw-bold;
     }
 }
 body{
-    background: $clr-bg url("/images/Background.png");
+    background: linear-gradient(315deg, rgba(11, 29, 38, 0.0), rgba(11, 29, 38, 1.0)), url("/images/Background.png");
     background-size: 100% auto;
-    color: white;
+    color: $clr-white;
 }
 
 a{
-    color: $main_highlite;
+    color: $clr-white;
     transition: opacity 0.3s;
     opacity: 1;
 
-    &:visited{
-        color: darken($main_highlite, 30)    
-    }
-
     &:hover,
     &:active{
-    opacity: .7;    
+    opacity: .7;
+    }
+}
+
+// Main styles
+.cover-space{
+    padding-bottom: 82%;    
+}
+
+.header{
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+
+    &__content{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        padding: 0 $main-shift;
+        align-items: center;
+    }
+    &__center{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.logo{
+    color: $clr-white;
+    text-decoration: none;
+    letter-spacing: 1%;
+
+    &__title{
+        font-size: 1.3rem;
+        font-family: $ff-chronicle ;
+    }
+}
+
+.main-nav{
+    &__list{
+        display: flex;        
+    }
+
+    &__link{
+        color: $clr-white;
+        text-decoration: none;
+        padding: 1.8rem 1.38rem;
+        display: inline-block;
+    }
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover,
+    &:active {
+        opacity: .7;
+    }
+
+    &__icon{
+        width: 1.3rem;
+        aspect-ratio: 1;
+        background: url('/images/icons/account.svg') no-repeat center center;
+        background-size: content;
+        cursor: pointer;
+        padding-right: 0.5rem;            
+    }
+
+    &__form{
+        text-decoration: none;
+        cursor: pointer;
     }
 }

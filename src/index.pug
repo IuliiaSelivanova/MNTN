@@ -12,17 +12,21 @@ html(lang="ru")
             .header__content
                 a.logo(href="/")
                     h1.logo__title MNTN 
-                nav.main-nav.header__center 
-                    ul.main-nav__list 
-                        li.main-nav__item 
-                            a.main-nav__link.main-nav__link_active(href="/") Equipment
-                        li.main-nav__item 
-                            a.main-nav__link(href="/") About us
-                        li.main-nav__item 
-                            a.main-nav__link(href="/") Blog 
-                .account 
-                    .account__icon 
-                    a.account__form(href="/") Account
+                .burger-menu.burger-menu_opened
+                    .burger-menu__content
+                        nav.main-nav.header__center 
+                            ul.main-nav__list 
+                                li.main-nav__item 
+                                    a.main-nav__link.main-nav__link_active(href="/") Equipment
+                                li.main-nav__item 
+                                    a.main-nav__link(href="/") About us
+                                li.main-nav__item 
+                                    a.main-nav__link(href="/") Blog 
+                        .account 
+                            .account__icon 
+                            a.account__form(href="/") Account
+                    button.burger-menu__control
+            .cover-space__burger
         section.section.section__main
             .main-title 
                 .main-title__summary A hiking guide
@@ -104,5 +108,4 @@ html(lang="ru")
                                 each link in ['The Team', 'Jobs', 'Press']
                                     li.menu__item 
                                         a.menu__link(href="#")= link 
-        
-                
+        script(src="/js/index.js")

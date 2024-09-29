@@ -1,6 +1,7 @@
 doctype html
 html(lang="ru") 
     head
+        meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(charset="utf-8")
         title Home page — MNTN
         link(rel="shortcut icon", href="/images/icons/favicon.png", type="image/x-icon")
@@ -12,7 +13,7 @@ html(lang="ru")
             .header__content
                 a.logo(href="/")
                     h1.logo__title MNTN 
-                .burger-menu.burger-menu_opened
+                .burger-menu
                     .burger-menu__content
                         nav.main-nav.header__center 
                             ul.main-nav__list 
@@ -25,7 +26,8 @@ html(lang="ru")
                         .account 
                             .account__icon 
                             a.account__form(href="/") Account
-                    button.burger-menu__control
+                    //- button.burger-menu__control
+            button.burger-menu__control
             .cover-space__burger
         section.section.section__main
             .main-title 

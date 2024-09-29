@@ -37,7 +37,7 @@ body {
 }
 
 body{
-    background: $clr-bg url("/images/Background.png") no-repeat center top;
+    background: $clr-bg url("../images/Background.png") no-repeat center top;
     background-size: 100% auto;
     color: $clr-white;
 }
@@ -134,10 +134,10 @@ a{
     &__icon{
         width: 1.3rem;
         aspect-ratio: 1;
-        background: url('/images/icons/account.svg') no-repeat center center;
+        background: url('../images/icons/account.svg') no-repeat center center;
         background-size: content;
         cursor: pointer;
-        padding-right: 0.5rem;            
+        padding-right: 0.5rem;
     }
 
     &__form{
@@ -411,27 +411,27 @@ a{
 .icon__instagram{
     width: 1.3em;
     height: 1.3em;
-    background: url('/images/icons/instagram.svg') no-repeat center center;
+    background: url('../images/icons/instagram.svg') no-repeat center center;
     background-size: contain;
 }
 .icon__twitter{
     width: 1.3em;
     height: 1.3em;
-    background: url('/images/icons/twitter.svg') no-repeat center center;
+    background: url('../images/icons/twitter.svg') no-repeat center center;
     background-size: contain;
 }
 
 .icon__arrow_downward {
     width: 1.3em;
     height: 1.4em;
-    background: url('/images/icons/arrow_downward.svg') no-repeat center center;
+    background: url('../images/icons/arrow_downward.svg') no-repeat center center;
     background-size: contain;
 }
 
 .icon__arrow_rightward{
     width: 1.4em;
     height: 1.1em;
-    background: url('/images/icons/arrow_rightward.svg') no-repeat center center;
+    background: url('../images/icons/arrow_rightward.svg') no-repeat center center;
     background-size: contain;
 }
 
@@ -577,7 +577,7 @@ a{
             opacity: 1;
         }
         .burger-menu__control{        
-            background-image: url(../images/icons/close.svg);
+            background-image: url("../images/icons/close.svg");
             z-index: 999;
         }
     }

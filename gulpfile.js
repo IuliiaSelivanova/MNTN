@@ -10,6 +10,7 @@ const gulpCleanCSS = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
 const del = require('delete');
 const svgSprite = require('gulp-svg-sprite');
+const ghPages = require('gulp-gh-pages');
 
 const outputDir = 'static';
 
@@ -111,3 +112,8 @@ exports.dev = gulp.parallel(
     watch,
     gulp.series(clean, js, pug, svg, styles, images, fonts, server)
 );
+
+gulp.task('deploy', function() {
+    return gulp.src('./static/**/*')
+        .pipe(ghPages());
+})

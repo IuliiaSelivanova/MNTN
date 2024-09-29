@@ -4,9 +4,9 @@ html(lang="ru")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(charset="utf-8")
         title Home page — MNTN
-        link(rel="shortcut icon", href="/images/icons/favicon.png", type="image/x-icon")
-        link(rel="stylesheet" href="/css/reset.css")
-        link(rel="stylesheet" href="/css/index.css")
+        link(rel="shortcut icon", href="./images/icons/favicon.png", type="image/x-icon")
+        link(rel="stylesheet" href="./css/reset.css")
+        link(rel="stylesheet" href="./css/index.css")
     body
         .cover-space 
         header.header 
@@ -26,7 +26,6 @@ html(lang="ru")
                         .account 
                             .account__icon 
                             a.account__form(href="/") Account
-                    //- button.burger-menu__control
             button.burger-menu__control
             .cover-space__burger
         section.section.section__main
@@ -66,9 +65,9 @@ html(lang="ru")
                         a.arrow-link(href="#")
                             | read more
                             .arrow-link__icon.icon__arrow_rightward
-                img.section-col.section-col__image(src="/images/GetStarted.png" alt="Mountains")
+                img.section-col.section-col__image(src="./images/GetStarted.png" alt="Mountains")
             section.section-cols#section-02
-                img.section-col.section-col__image(src="/images/HikingEssentials.png" alt="HikingEssentials")
+                img.section-col.section-col__image(src="./images/HikingEssentials.png" alt="HikingEssentials")
                 .section-col.section-col__content
                     span.main-title__number 02
                     .main-title.main-title_small
@@ -90,7 +89,7 @@ html(lang="ru")
                         a.arrow-link(href="#")
                             | read more
                             .arrow-link__icon.icon__arrow_rightward
-                img.section-col.section-col__image(src="/images/MapTiming.png" alt="Mountains")
+                img.section-col.section-col__image(src="./images/MapTiming.png" alt="Mountains")
             footer.footer#footer
                 .footer__content
                     .copyrights  
@@ -110,4 +109,4 @@ html(lang="ru")
                                 each link in ['The Team', 'Jobs', 'Press']
                                     li.menu__item 
                                         a.menu__link(href="#")= link 
-        script(src="/js/index.js")
+        script(src="./js/index.js")
